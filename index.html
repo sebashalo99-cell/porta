@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Sandino - Diseñador Digital y Multimedia</title>
+    <meta name="description" content="Portafolio de Sebastian Sandino - Diseñador Digital y Multimedia especializado en 3D, VFX, Realidad Aumentada y Desarrollo Web">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="scrollToSection('hero')">
+                    <span>SEBASTIAN</span>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <button onclick="scrollToSection('about')" class="nav-link">SOBRE MÍ</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">PROYECTOS</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">CONTACTO</button>
+                </nav>
+
+                <div class="header-controls">
+                    <button id="langToggle" class="lang-btn">EN</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <button onclick="scrollToSection('about')" class="nav-link">SOBRE MÍ</button>
+                    <button onclick="scrollToSection('projects')" class="nav-link">PROYECTOS</button>
+                    <button onclick="scrollToSection('contact')" class="nav-link">CONTACTO</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element" class="google-translate"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+        
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left side - Credentials -->
+                <div class="hero-left">
+                    <div class="credentials-card">
+                        <div class="credentials-header">
+                        </div>
+
+                        <h1 class="hero-title">
+                            SEBASTIAN
+                            <span class="gradient-text">SANDINO</span>
+                        </h1>
+
+                        <p class="hero-subtitle">Portafolio</p>
+
+                        <div class="about-card">
+                            <h3 class="about-title">ACERCA DE</h3>
+                            <p class="about-description">
+                                Un diseñador apasionado que fusiona creatividad <br>
+                                 e innovación para crear experiencias <br>
+                                 digitales únicas y memorables.
+                            </p>
+                            <p>Administro una amplia gama de programas <br>
+                                de software, tanto para el diseño<br>
+                                gráfico y la web, como la Suite de <br>
+                                Adobe, entre los que se incluyen <br>
+                                Photoshop, Ilustrator, Premier <br>
+                                y After Efects. Asimismo, herramientas<br>
+                                de diseño en 3D y render, tales como<br>
+                                Blender, Rhino, V-Ray, Zbrush y Unreal.</p>
+
+                        </div>
+
+                        <div class="scroll-control">
+                            <div class="scroll-text">
+                                <p>CONTROLA TU</p>
+                                <p>SCROLL</p>
+                            </div>
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right side - Visual content -->
+                <div class="hero-right">
+                    <div class="visual-main">
+                        <div class="visual-card main-visual">
+                            <div class="visual-content">
+                                <img src="img/PPP.png" alt="Visual principal" class="visual-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visual-secondary">
+                        <div class="visual-card secondary-visual-1">
+                            <div class="visual-content">
+                                    <img src="img/Iconos_1.png" alt="Herramientas" class="visual-icon">
+                            </div>
+                        </div>
+                        <div class="visual-card secondary-visual-2"> 
+                            <div class="visual-content">
+                                     <img src="img/Iconos_2.png" alt="Herramientas" class="visual-icon2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    ACERCA  <span class="gradient-text">DE MÍ</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="about-content">
+                <!-- Profile section -->
+                <div class="profile-section">
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <img src="img/Principal.png" 
+                                 alt="Sebastian Sandino" 
+                                 class="profile-image">
+                            <div class="profile-overlay"></div>
+                        </div>
+                        <h3 class="profile-name">Sebastian Sandino</h3>
+                        <p class="profile-title">Diseñador Digital y Multimedia</p>
+                        <p class="profile-description">Un diseñador apasionado que fusiona creatividad e innovación para crear experiencias digitales únicas y memorables.</p>
+                        
+                        <div class="profile-contact">
+                            <p><span class="contact-label">Email:</span> jsandino@universidadmayor.edu.co</p>
+                            <p><span class="contact-label">Instagram:</span> @Mega_Aiden</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills and info section -->
+                <div class="info-section">
+                    <!-- Skills -->
+                    <div class="skills-card">
+                        <h3 class="card-title">
+                            <span class="title-dot"></span>HABILIDADES
+                        </h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Modelado 3D</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Diseño web</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Diseño UI/UX</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">VFX</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Realidad Aumentada</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Diseño BTL</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education & Experience -->
+                    <div class="edu-exp-section">
+                        <!-- Education -->
+                        <div class="education-card">
+                            <h3 class="card-title">
+                                <span class="title-dot"></span>EDUCACIÓN
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">Diseñador Digital y Multimedia</h4>
+                                    <p class="timeline-institution">Universidad Colegio Mayor de Cundinamarca</p>
+                                    <p class="timeline-year">2020-2025</p>
+                                    <p class="timeline-description">Especialización en diseño multimedia y Modelado 3D</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="experience-card">
+                            <h3 class="card-title">
+                                <span class="title-dot"></span>EXPERIENCIA
+                            </h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title"> Diseñador 3D y Web</h4>
+                                    <p class="timeline-institution">GLOBALTEE</p>
+                                    <p class="timeline-year"> Sep2024 - May2025</p>
+                                    <p class="timeline-description">El objetivo se encontraba en desarrollar y renderizar máquinas y modelos en 3D con el propósito de generar material BTL para diversos medios digitales, incluyendo la página web en la que gestiono contenidos.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">Diseñador Web</h4>
+                                    <p class="timeline-institution">Hoteles Decameron</p>
+                                    <p class="timeline-year">Feb2024 - Ago2024</p>
+                                    <p class="timeline-description">Desarrollo de material visual como imágenes y videos, así como actualizar información importante como noticias, banners y precios.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">Diseñador  Multimedia</h4>
+                                    <p class="timeline-institution">IML Aislamientos</p>
+                                    <p class="timeline-year"> Jun2022 - Feb2023</p>
+                                    <p class="timeline-description">Diseñar y renderizar piezas de motores para publicidad interna y externa de la empresa. También trabajé en el equipo de desarrollo de una aplicación Web en la que aquellas piezas se podían visualizar en tiempo real.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h4 class="timeline-title">Auxiliar de diseño</h4>
+                                    <p class="timeline-institution">Deco Depot</p>
+                                    <p class="timeline-year"> Mayo2021 - Marzo 2022</p>
+                                    <p class="timeline-description">Me encargaba de diseñar material digital publicitario para redes sociales, también me desempeñaba en editar y realizar planos para impresiones 3d.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    PROYECTOS <span class="gradient-text">DESTACADOS</span>
+                </h2>
+                <div class="section-line"></div>
+                
+                <!-- Category filters -->
+                <div class="project-filters">
+                    <button class="filter-btn active" data-category="all">Todos</button>
+                    <button class="filter-btn" data-category="Página Web">Página Web</button>
+                    <button class="filter-btn" data-category="Modelado 3D">Modelado 3D</button>
+                    <button class="filter-btn" data-category="Animación">Animación</button>
+                    <button class="filter-btn" data-category="Modelado de Stands">Modelado de Stands</button>
+                    <button class="filter-btn" data-category="VFX">VFX</button>
+                    <button class="filter-btn" data-category="RA">RA</button>
+                </div>
+            </div>
+
+            <!-- Projects grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <h3 id="modalTitle" class="modal-title"></h3>
+                    <span id="modalCategory" class="modal-category"></span>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            
+            <p id="modalDescription" class="modal-description"></p>
+            
+            <div id="modalImages" class="modal-images"></div>
+            
+            <div class="modal-video">
+                <video id="modalVideo" controls>
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            
+            <div class="modal-technologies">
+                <h4>TECNOLOGÍAS:</h4>
+                <div id="modalTechnologies" class="technologies-list"></div>
+            </div>
+            
+            <div id="modalLink" class="modal-link" style="display: none;">
+                <button class="visit-project-btn" onclick="visitProject()">Visitar Proyecto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    CONTACT<span class="gradient-text">ME</span>
+                </h2>
+                <div class="section-line"></div>
+                <p class="section-description">
+                    ¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact info -->
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Información de Contacto</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>sebashalo99@gmail.com</p>
+                                <p>jsandino@universidadmayor.edu.co</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+57 301 322 02 42</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Ubicación</h4>
+                                <p>Bogotá, Colombia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📷</div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>@mega_aiden</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3 class="social-title">Sígueme en Redes</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">📷</a>
+                            <a href="#" class="social-icon">💼</a>
+                            <a href="#" class="social-icon">🎨</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-title">
+                        SEBASTIAN <span class="gradient-text">SANDINO</span>
+                    </h3>
+                    <p class="footer-description">
+                        Diseñador Digital y Multimedia especializado en crear experiencias visuales únicas 
+                        que conectan marcas con audiencias a través del arte y la tecnología.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-section-title">Enlaces Rápidos</h4>
+                    <ul class="footer-nav">
+                        <li><button onclick="scrollToSection('about')">Sobre Mí</button></li>
+                        <li><button onclick="scrollToSection('projects')">Proyectos</button></li>
+                        <li><button onclick="scrollToSection('contact')">Contacto</button></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h4 class="footer-section-title">Servicios</h4>
+                    <ul class="services-list">
+                        <li>Diseño UI/UX</li>
+                        <li>Modelado 3D</li>
+                        <li>Animación Digital</li>
+                        <li>Efectos Visuales (VFX)</li>
+                        <li>Realidad Aumentada</li>
+                        <li>Desarrollo Web</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2025 Sebastian Sandino. Todos los derechos reservados.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Política de Privacidad</a>
+                        <a href="#">Términos de Uso</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-made-with">
+                <p>Hecho con <span class="heart">♥</span> y mucho café ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+</body>
+</html>
